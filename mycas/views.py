@@ -11,3 +11,9 @@ class MyCASAdapter(CASAdapter):
     provider_id = MyCASProvider.id
     url = 'https://mycas.mydomain.net'  # The CAS server url
     version = 3  # Select the CAS protocol version used by the CAS server: 1, 2, 3…
+
+
+from allauth_cas.views import CASCallbackView, CASLoginView
+
+login = CASLoginView.adapter_view(MyCASAdapter)
+callback = CASLogoutView.adapter_view(MyCASAdapter)
