@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "allauth_cas",
-    # "mycas",
+    "mycas",
 ]
 
 MIDDLEWARE = [
