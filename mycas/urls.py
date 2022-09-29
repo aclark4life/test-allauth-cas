@@ -2,4 +2,4 @@ from allauth_cas.urls import default_urlpatterns
 
 from .provider import MyCASProvider
 
-urlpatterns = default_urlpatterns(MyCasProvider)
+urlpatterns = default_urlpatterns(MyCASProvider)
