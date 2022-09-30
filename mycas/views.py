@@ -1,10 +1,11 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 
 from allauth_cas.views import CASAdapter
 
-from .providers import MyCASProvider
+from .provider import MyCASProvider
 
 
 class MyCASAdapter(CASAdapter):
@@ -13,7 +14,7 @@ class MyCASAdapter(CASAdapter):
     version = 3  # Select the CAS protocol version used by the CAS server: 1, 2, 3…
 
 
-# from allauth_cas.views import CASCallbackView, CASLoginView
+from allauth_cas.views import CASCallbackView, CASLoginView, CASLogoutView
 
 login = CASLoginView.adapter_view(MyCASAdapter)
 callback = CASLogoutView.adapter_view(MyCASAdapter)
